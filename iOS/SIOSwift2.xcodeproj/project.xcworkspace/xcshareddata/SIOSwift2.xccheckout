@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AF1B5340-B244-4C8B-8F95-5C262CEC514D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SIOSwift2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>028F252612B398B9FB5FCCB3BADFB343FDC676E8</key>
+		<string>github.com:ripitrust/iOSClient.git</string>
+		<key>C53B40E5741D879868536169659A4488D765EA0B</key>
+		<string>github.com:ripitrust/Fitapp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SIOSwift2.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>028F252612B398B9FB5FCCB3BADFB343FDC676E8</key>
+		<string>../..</string>
+		<key>C53B40E5741D879868536169659A4488D765EA0B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:ripitrust/iOSClient.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>028F252612B398B9FB5FCCB3BADFB343FDC676E8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C53B40E5741D879868536169659A4488D765EA0B</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>028F252612B398B9FB5FCCB3BADFB343FDC676E8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
