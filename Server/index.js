@@ -11,13 +11,14 @@ db.once('open', function (callback) {
   // yay!
 });
 app.get('/', function(req, res){
-  res.sendfile('index.html');
-});
+  res.sendFile('/Users/Chris/Documents/Development/FYP-Fitserver/web/index.html');
+}); 
 var userSchema = mongoose.Schema({
 	name: String,
 	age: String,
 	gender:String,
-	calories:String
+	calories:String,
+	wellBeingScore:Number
 });
 var User = mongoose.model('User',userSchema)
 //console.log ('DEBUGG BEFORE QUERY USER IS :' +User);
@@ -43,7 +44,8 @@ var user1 = new User (
 { name: data.name,
   age :data.age,
   gender: data.gender,
-  calories:data.calories,	
+  calories:data.calories,
+  wellBeingScore: data.wellBeingScore	
 })
 //console.log ('DEBUGG: user name is : '+user1.name)
 user1.save(function(err,user1) {
@@ -73,7 +75,8 @@ socket.on('query', function(data){
   console.log("name: "+data.name
   			 +"\nage: "+data.age	
   			 +"\ngender: "+data.gender
-  			 +"\ncalories: "+data.calories);
+  			 +"\ncalories: "+data.calories
+  			 +"\nWell-Being: "+data.wellBeingScore);
   var msg = dbFunction(data);
   console.log ('db save is '+msg)
   io.emit ('db status',msg);

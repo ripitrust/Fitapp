@@ -11,6 +11,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageField: UITextField!
     @IBOutlet weak var genderField: UITextField!
     @IBOutlet weak var calField: UITextField!
+    @IBOutlet weak var wellBeingField: UITextField!
+    
+   
     @IBOutlet weak var reqName: UITextField!
     @IBOutlet weak var reqAge: UITextField!
     @IBOutlet weak var reqGender: UITextField!
@@ -97,9 +100,11 @@ class ViewController: UIViewController {
             ["name":"\(nameField.text)",
             "age":"\(ageField.text)",
             "gender":"\(genderField.text)",
-            "calories":"\(calField.text)"])
+            "calories":"\(calField.text)",
+            "wellBeingScore":"\(wellBeingField.text)"
+            ])
         }
-    let socket = SocketIOClient(socketURL: "http://192.168.0.101:3000")
+    let socket = SocketIOClient(socketURL: "http://localhost:3000")
     override func viewDidLoad() {
         super.viewDidLoad()
         nameField.clearsOnBeginEditing = true
@@ -107,13 +112,18 @@ class ViewController: UIViewController {
         genderField.clearsOnBeginEditing = true
         calField.clearsOnBeginEditing = true
         reqName.clearsOnBeginEditing = true
+        wellBeingField.clearsOnBeginEditing=true
         socket.onAny {println("got event: \($0.event) with items \($0.items)")}
         let data = JSON (["name":"\(nameField.text)",
                           "age":"\(ageField.text)",
                           "gender":"\(genderField.text)",
-                          "calories":"\(calField.text)"])
+                          "calories":"\(calField.text)",
+                            "wellBeingScore":"\(wellBeingField.text)",
+])
           let name = data["name"]
-        println("heeeeeerer  name is \(name)")
+          let wb = data["wellBeingScore"]
+        println("name is \(name)")
+        println("wbscore is \(wb)")
         socket.on("db status") {data, ack in
             if let msg = data?[0] as? String? {
                 let alert = UIAlertController(title: "Save Successful",
